@@ -1,0 +1,16 @@
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\UnitTest.nunit
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\Konvolucio.WinUSB.xml
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\Konvolucio.WinUSB.dll
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\Konvolucio.WinUSB.pdb
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\Mono.Cecil.dll
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\Mono.Cecil.Mdb.dll
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\Mono.Cecil.Pdb.dll
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\Mono.Cecil.Rocks.dll
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\nunit.engine.api.dll
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\nunit.engine.dll
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\bin\Release\NUnit3.TestAdapter.dll
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\obj\Release\Konvolucio.WinUSB.dll
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\obj\Release\Konvolucio.WinUSB.pdb
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\obj\Release\Konvolucio.WinUSB.csproj.CoreCompileInputs.cache
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\obj\Release\Konvolucio.WinUSB.csprojAssemblyReference.cache
+D:\@@@!ProjectS\MCAN120803\Software\Application\Konvolucio.WinUSB\obj\Release\Konvolucio.WinUSB.csproj.CopyComplete
