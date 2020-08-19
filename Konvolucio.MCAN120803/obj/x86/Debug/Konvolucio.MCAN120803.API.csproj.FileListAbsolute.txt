@@ -44,3 +44,16 @@ D:\@@@!ProjectS\KonvolucioApp\MCAN120803Light\Konvolucio.MCAN120803\obj\x86\Debu
 D:\@@@!ProjectS\KonvolucioApp\MCAN120803Light\Konvolucio.MCAN120803\obj\x86\Debug\Konvolucio.MCAN120803.API.csproj.CopyComplete
 D:\@@@!ProjectS\KonvolucioApp\MCAN120803Light\Konvolucio.MCAN120803\obj\x86\Debug\Konvolucio.MCAN120803.API.dll
 D:\@@@!ProjectS\KonvolucioApp\MCAN120803Light\Konvolucio.MCAN120803\obj\x86\Debug\Konvolucio.MCAN120803.API.pdb
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\bin\Debug\UnitTest.nunit
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\bin\Debug\Konvolucio.MCAN120803.API.dll
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\bin\Debug\Konvolucio.MCAN120803.API.pdb
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\bin\Debug\Konvolucio.WinUSB.dll
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\bin\Debug\Konvolucio.WinUSB.pdb
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\bin\Debug\nunit.framework.xml
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\obj\x86\Debug\Konvolucio.MCAN120803.API.csprojAssemblyReference.cache
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\obj\x86\Debug\Konvolucio.MCAN120803.API.Properties.Resources.resources
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\obj\x86\Debug\Konvolucio.MCAN120803.API.csproj.GenerateResource.cache
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\obj\x86\Debug\Konvolucio.MCAN120803.API.csproj.CoreCompileInputs.cache
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\obj\x86\Debug\Konvolucio.MCAN120803.API.csproj.CopyComplete
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\obj\x86\Debug\Konvolucio.MCAN120803.API.dll
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.MCAN120803\obj\x86\Debug\Konvolucio.MCAN120803.API.pdb

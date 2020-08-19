@@ -173,10 +173,10 @@ namespace Konvolucio.MCAN120803.GUI
             MainForm.KeyUp += new KeyEventHandler(MainForm_KeyUp);
             MainForm.Shown += new EventHandler(MainForm_Shown);
 
-            MainForm.MainView.TreeView.AfterSelect += new TreeViewEventHandler(TreeView_AfterSelect);
-            MainForm.MainView.TreeView.AfterExpand += new TreeViewEventHandler(TreeView_AfterExpand);
-            MainForm.MainView.TreeView.AfterCollapse += new TreeViewEventHandler(TreeView_AfterCollapse);
-            MainForm.MainView.TreeView.NodeMouseClick += new TreeNodeMouseClickEventHandler(TreeView_NodeMouseClick);
+            MainForm.TreeView.AfterSelect += new TreeViewEventHandler(TreeView_AfterSelect);
+            MainForm.TreeView.AfterExpand += new TreeViewEventHandler(TreeView_AfterExpand);
+            MainForm.TreeView.AfterCollapse += new TreeViewEventHandler(TreeView_AfterCollapse);
+            MainForm.TreeView.NodeMouseClick += new TreeNodeMouseClickEventHandler(TreeView_NodeMouseClick);
             MainForm.Text = _storage.ToString();
 
 
@@ -197,13 +197,13 @@ namespace Konvolucio.MCAN120803.GUI
             #region  Presenters
 
 
-            new AppModules.Tracer.Presenter(
-                MainForm.MainView.TraceAndPagesView.TraceGridView,
-                _messageTrace,
-                _parameters);
+            //new AppModules.Tracer.Presenter(
+            //    MainForm.TraceAndPagesView.TraceGridView,
+            //    _messageTrace,
+            //    _parameters);
 
             new AppModules.Statistics.Message.Presenter(
-                MainForm.MainView.StatisticsView,
+                MainForm.StatisticsView,
                 _messageStatistics,
                 _storage);
 
@@ -237,16 +237,16 @@ namespace Konvolucio.MCAN120803.GUI
 
 
             #region The Tree Nodes
-            MainForm.MainView.TreeView.Nodes.Add(
+            MainForm.TreeView.Nodes.Add(
                 new AppModules.Adapters.TreeNodes.ProjectTopTreeNode(
                     new TreeNode[]
                     {
-                        (_startTreeNode = new AppModules.Adapters.TreeNodes.AdapterTreeNode(_mainForm.MainView.TreeView,
+                        (_startTreeNode = new AppModules.Adapters.TreeNodes.AdapterTreeNode(_mainForm.TreeView,
                             new TreeNode[]
                             {
                                 new AppModules.Statistics.Adapter.TreeNodes.AdapterStatisticsTreeNode(_adapterStatistics), 
                                 new AppModules.Statistics.Message.TreeNodes.MessagesTreeNode(_messageStatistics,_adapterService, _parameters),
-                                new TopTreeNode(MainForm.MainView.TraceAndPagesView.Pages), 
+                                new TopTreeNode(MainForm.TraceAndPagesView.Pages), 
                             })),
                     })
 
@@ -254,8 +254,8 @@ namespace Konvolucio.MCAN120803.GUI
             #endregion
 
             #region Main TreeView Items
-            MainForm.MainView.TreeView.ContextMenuStrip = new ContextMenuStrip();
-            MainForm.MainView.TreeView.ContextMenuStrip.Items.AddRange(
+            MainForm.TreeView.ContextMenuStrip = new ContextMenuStrip();
+            MainForm.TreeView.ContextMenuStrip.Items.AddRange(
                 new ToolStripItem[]
                 {
                     
@@ -270,18 +270,18 @@ namespace Konvolucio.MCAN120803.GUI
                     new AppModules.Statistics.Adapter.Commands.EnabledNodeCommand(), 
                     new AppModules.Statistics.Message.Commands.EnabledNodeCommand(), 
                     new AppModules.Statistics.Message.Commands.ClearNodeCommand(_messageStatistics),
-                    new AppModules.Statistics.Message.Commands.DefaultNodeCommand(_messageStatistics, MainForm.MainView.StatisticsView),
+                    new AppModules.Statistics.Message.Commands.DefaultNodeCommand(_messageStatistics, MainForm.StatisticsView),
                    
-                    new NewToolNodeCommand(MainForm.MainView.TreeView, _storage.Tools),
-                    new DeleteToolNodeCommand(MainForm.MainView.TreeView, _storage.Tools), 
-                    new RenameToolNodeCommand(MainForm.MainView.TreeView,_storage.Tools,MainForm.MainView.TraceAndPagesView.Pages), 
+                    new NewToolNodeCommand(MainForm.TreeView, _storage.Tools),
+                    new DeleteToolNodeCommand(MainForm.TreeView, _storage.Tools), 
+                    new RenameToolNodeCommand(MainForm.TreeView,_storage.Tools,MainForm.TraceAndPagesView.Pages), 
 
                 }
             );
            #endregion
 
             #region  Tree Menu Items
-            MainForm.MainView.TreeToolStrip.Items.AddRange(
+            MainForm.TreeToolStrip.Items.AddRange(
                 new ToolStripItem[]
                 {
 
@@ -340,7 +340,7 @@ namespace Konvolucio.MCAN120803.GUI
             images.Images.Add("hummer24", Resources.hummer24);
             #endregion
 
-            MainForm.MainView.TreeView.ImageList = images;
+            MainForm.TreeView.ImageList = images;
 
         }
 
@@ -380,8 +380,8 @@ namespace Konvolucio.MCAN120803.GUI
             Converters.DataFrameConverter.Format = _storage.Parameters.DataFormat;
 
             /*Megnyitást követően rá áll az Adapter Nódra a TreeView-ban.*/
-            MainForm.MainView.TreeView.Nodes[0].ExpandAll();
-            MainForm.MainView.TreeView.SelectedNode = _startTreeNode;
+            MainForm.TreeView.Nodes[0].ExpandAll();
+            MainForm.TreeView.SelectedNode = _startTreeNode;
 
             _adapterStatistics.Reset();
             _messageStatistics.Clear();
@@ -481,7 +481,7 @@ namespace Konvolucio.MCAN120803.GUI
                 ShowStatistics();
 
 
-            if (MainForm.MainView.TraceAndPagesView.Pages.ClickOnNodeHandler(e.Node))
+            if (MainForm.TraceAndPagesView.Pages.ClickOnNodeHandler(e.Node))
             {
                 ShowTraceInMainView();
             }
@@ -742,7 +742,7 @@ namespace Konvolucio.MCAN120803.GUI
                     ShowTraceInMainView();
                 }
             }
-            _mainForm.Status = "Started";
+          
         }
 
         #region Show
@@ -750,13 +750,13 @@ namespace Konvolucio.MCAN120803.GUI
 
         public void ShowTraceInMainView()
         {
-            MainForm.MainView.ShowTraceView(_traceSenderMainToolbarCommands);
+            MainForm.ShowTraceView(_traceSenderMainToolbarCommands);
         }
 
 
         public void ShowStatistics()
         {
-            MainForm.MainView.ShowStatisticsView(_traceSenderMainToolbarCommands);
+            MainForm.ShowStatisticsView(_traceSenderMainToolbarCommands);
         }
         #endregion
     }

@@ -28,19 +28,19 @@ namespace Konvolucio.MCAN120803.GUI.AppModules.Statistics.Message
         {
 
 
-            gridView.Source = statistics.Messages;
+        //    gridView.Source = statistics.Messages;
 
-            gridView.Menu.Items.AddRange(
-                new ToolStripItem[]
-                {
+            //gridView.Menu.Items.AddRange(
+            //    new ToolStripItem[]
+            //    {
 
-                   new ClearCommand(statistics), 
-                   new DefaultCommand(statistics, gridView), 
-                   new EnabledCommand(project), 
-                   new ExportCommand(project, gridView),
+            //       new ClearCommand(statistics), 
+            //       new DefaultCommand(statistics, gridView), 
+            //       new EnabledCommand(project), 
+            //       new ExportCommand(project, gridView),
 
 
-                });
+            //    });
            
             #region Project események
             EventAggregator.Instance.Subscribe<StorageAppEvent>(e1 =>

@@ -338,12 +338,6 @@
     <Compile Include="AppEvents\StopAppEvent.cs" />
     <Compile Include="Services\ErrorHandlerService.cs" />
     <Compile Include="AppGuiSettings\GuiSettings.LogView.cs" />
-    <Compile Include="AppModules\Main\View\MainView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AppModules\Main\View\MainView.Designer.cs">
-      <DependentUpon>MainView.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppEvents\EventAggregator.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -587,9 +581,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppModules\Export\View\ExportForm.resx">
       <DependentUpon>ExportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppModules\Main\View\MainView.resx">
-      <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppModules\Main\View\SaveAsProjectForm.en-US.resx">
       <DependentUpon>SaveAsProjectForm.cs</DependentUpon>

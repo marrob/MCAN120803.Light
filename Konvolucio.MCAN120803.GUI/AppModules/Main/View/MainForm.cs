@@ -4,7 +4,7 @@ namespace Konvolucio.MCAN120803.GUI.AppModules.Main.View
     using System;
     using System.ComponentModel;
     using System.Windows.Forms;
-    
+    using Statistics.Message.View;
     using Properties;
     using WinForms.Framework;
 
@@ -18,35 +18,35 @@ namespace Konvolucio.MCAN120803.GUI.AppModules.Main.View
         event KeyEventHandler KeyUp;
         event HelpEventHandler HelpRequested; /*????*/
 
-        IMainView MainView { get; }
         string Text { get; set; }
-        string Status { get; set; }
 
         void Close();
+
+        ITraceSenderView TraceAndPagesView { get; }
+        KnvTreeView TreeView { get; }
+        ToolStrip TreeToolStrip { get; }
+        DockStyle Dock { get; set; }
+        IStatisticsGridView StatisticsView { get; }
+        void ShowTraceView(ToolStripMenuItem[] menuItems);
+        void ShowStatisticsView(ToolStripMenuItem[] menuItems);
 
         void CursorWait();
         void CursorDefault();
     }
 
-    public partial class MainForm : Form, IMainForm
+    public partial class MainForm : Form,  IMainForm
     {
+        private readonly TraceSenderView _traceAndPagesView;
+        private readonly StatisticsGridView _statisticsGridView;
 
-        public IMainView MainView { get { return mainView; } }
+        public ITraceSenderView TraceAndPagesView => _traceAndPagesView;
 
 
-        
-        public string Status
-        {
-            get { return toolStripStatusLabel1.Text; }
-            set 
-            {
-                readyTimer.Stop();
-                readyTimer.Start();
-                toolStripStatusLabel1.Text = value;
-                toolStripProgressBar1.Visible = false;
-            }
-        }
-      
+        public KnvTreeView TreeView => treeView1;
+        public ToolStrip TreeToolStrip => toolStrip2;
+        public IStatisticsGridView StatisticsView => _statisticsGridView;
+        //public ToolStrip MainToolStrip => toolStrip1;
+
         public new string Text
         {
             get { return base.Text; }
@@ -60,7 +60,6 @@ namespace Konvolucio.MCAN120803.GUI.AppModules.Main.View
             }
         }
         
-        readonly MainView mainView;
         readonly Timer readyTimer;
 
         /// <summary>
@@ -72,7 +71,6 @@ namespace Konvolucio.MCAN120803.GUI.AppModules.Main.View
             readyTimer = new Timer();
             readyTimer.Interval = 2000;
             readyTimer.Tick += new EventHandler(readyTimer_Tick);
-            mainView = new MainView() {Dock = DockStyle.Fill };
         }
 
         void readyTimer_Tick(object sender, EventArgs e)
@@ -89,8 +87,7 @@ namespace Konvolucio.MCAN120803.GUI.AppModules.Main.View
         /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            panel1.Controls.Add(mainView);
+
         }
 
         /// <summary>
@@ -101,7 +98,6 @@ namespace Konvolucio.MCAN120803.GUI.AppModules.Main.View
             Settings.Default.MainFormLocation = Location;
             Settings.Default.MainFormWindowState = WindowState;
             Settings.Default.MainFormSize = Size;
-            MainView.LayoutSave();
         }
         /// <summary>
         /// Állisd vissza ennek a vezélrlőnek az állapotát
@@ -111,20 +107,34 @@ namespace Konvolucio.MCAN120803.GUI.AppModules.Main.View
             Location = Settings.Default.MainFormLocation;
             WindowState = Settings.Default.MainFormWindowState;
             Size = Settings.Default.MainFormSize;
-            MainView.LayoutRestore();
+        }
+        public void ShowStatisticsView(ToolStripMenuItem[] menuItems)
+        {
+           
+            if (!splitContainerMainTree.Panel2.Controls.Contains(_statisticsGridView))
+            { /*Nem villog*/
+                splitContainerMainTree.Panel2.Controls.Clear();
+                splitContainerMainTree.Panel2.Controls.Add(_statisticsGridView);
+            }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        public void ShowTraceView(ToolStripMenuItem[] menuItems)
+        {
+            if (!splitContainerMainTree.Panel2.Controls.Contains(_traceAndPagesView))
+            { 
+                splitContainerMainTree.Panel2.Controls.Clear();
+                splitContainerMainTree.Panel2.Controls.Add(_traceAndPagesView);
+            }
+
+            splitContainerMainTree.Panel2.Controls.Clear();
+            splitContainerMainTree.Panel2.Controls.Add(_traceAndPagesView);
+        }
+
         public void CursorWait()
         {
             Cursor.Current = Cursors.WaitCursor;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public void CursorDefault()
         {
             Cursor.Current = Cursors.Default;

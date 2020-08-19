@@ -32,3 +32,12 @@ D:\@@@!ProjectS\KonvolucioApp\MCAN120803Light\Konvolucio.WinUSB\obj\Debug\Konvol
 D:\@@@!ProjectS\KonvolucioApp\MCAN120803Light\Konvolucio.WinUSB\obj\Debug\Konvolucio.WinUSB.csproj.CopyComplete
 D:\@@@!ProjectS\KonvolucioApp\MCAN120803Light\Konvolucio.WinUSB\obj\Debug\Konvolucio.WinUSB.dll
 D:\@@@!ProjectS\KonvolucioApp\MCAN120803Light\Konvolucio.WinUSB\obj\Debug\Konvolucio.WinUSB.pdb
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.WinUSB\bin\Debug\UnitTest.nunit
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.WinUSB\bin\Debug\Konvolucio.WinUSB.dll
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.WinUSB\bin\Debug\Konvolucio.WinUSB.pdb
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.WinUSB\bin\Debug\nunit.framework.xml
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.WinUSB\obj\Debug\Konvolucio.WinUSB.csprojAssemblyReference.cache
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.WinUSB\obj\Debug\Konvolucio.WinUSB.csproj.CoreCompileInputs.cache
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.WinUSB\obj\Debug\Konvolucio.WinUSB.csproj.CopyComplete
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.WinUSB\obj\Debug\Konvolucio.WinUSB.dll
+D:\@@@!ProjectS\KonvolucioApp\MCAN120803.Light\Konvolucio.WinUSB\obj\Debug\Konvolucio.WinUSB.pdb
